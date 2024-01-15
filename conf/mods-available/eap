@@ -1,0 +1,34 @@
+eap {
+
+  default_eap_type = tls
+
+  tls-config tls-common {
+
+    private_key_file = ${private_key_file}
+    private_key_password = ${private_key_password}
+    certificate_file = ${certificate_file}
+    ca_file = ${ca_file}
+    ca_path = ${ca_path}
+    random_file = /dev/urandom
+    check_crl = no
+    check_cert_cn = %{User-Name}
+    cipher_list = "HIGH"
+    require_client_cert = yes
+    ecdh_curve = ""
+    tls_max_version = "1.2"
+    tls_min_version = "1.2"
+
+    # TODO: write OCSP setup HOWTO
+    #ocsp {
+    #  enable = yes
+    #  override_cert_url = yes
+    #  url = http://127.0.0.1/ocsp/"
+    #}
+
+  }
+
+  tls {
+    tls = "tls-common"
+  }
+
+}

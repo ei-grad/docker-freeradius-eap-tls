@@ -1,0 +1,12 @@
+---
+version: '3.8'
+services:
+  freeradius:
+    #image: eigrad/freeradius-eap-tls
+    build: .
+    ports:
+      - "1812:1812/udp"
+    volumes:
+      - ./custom.conf:/conf/custom.conf
+      - ./certs:/conf/certs
+    restart: unless-stopped
