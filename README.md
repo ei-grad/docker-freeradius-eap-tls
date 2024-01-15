@@ -6,6 +6,11 @@ certificates. This setup features a custom minimal FreeRadius configuration
 suitable only for EAP-TLS auth with a single CA certificate and OCSP for
 certificate revokation.
 
+> [!NOTE]
+> OCSP guidelines are missing currently. PKI is also left out of scope for now.
+> ~~RTFM somewhere else, it is not so complex as default FreeRadius config.~~
+> Maybe later.
+
 ## Usage
 
 ### Prerequisites
