@@ -74,9 +74,6 @@ use it also.
 > [!IMPORTANT]
 > Ensure `100:101` could read the configs, certificates and server private key.
 
-```
-```
-
 ### Run
 
 ```bash
